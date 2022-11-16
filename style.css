@@ -90,13 +90,14 @@ button {
 .guess-input-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 0 0 75px;
 }
 
 .num-input {
   text-align: center;
   height: 85px;
-  width: 200px;
+  width: 250px;
   font-size: 52px;
   font-family: inherit;
 }
@@ -107,6 +108,7 @@ button {
   border: 2px solid green;
   border-radius: 12px;
   font-size: 22px;
+  width: 200px;
 }
 
 .btn-check:hover {
@@ -147,4 +149,8 @@ button {
 
 .btn-hint:hover {
   opacity: 1;
+}
+
+.test {
+  background-color: rgb(105, 47, 47);
 }
