@@ -5,7 +5,12 @@ const btnOptions = document.querySelectorAll(".btn-num-options");
 const message = document.querySelector(".message");
 const numInput = document.querySelector(".num-input");
 const btnCheck = document.querySelector(".btn-check");
+const btnReset = document.querySelector(".btn-reset");
 const currentScore = document.querySelector(".currentScore");
+const highScoreDisplay50 = document.querySelector(".highscore50");
+const highScoreDisplay100 = document.querySelector(".highscore100");
+const highScoreDisplay1000 = document.querySelector(".highscore1000");
+const btnHint = document.querySelector(".btn-hint");
 
 let secretNum;
 let rangeNum;
@@ -32,12 +37,37 @@ function checkLose() {
     btnCheck.disabled = true;
     message.textContent = "You have lost! Whomp! Whomp!";
     document.querySelector("body").style.backgroundColor = "rgb(105, 47, 47)";
+    secretNumDisplay();
   }
 }
 
 function subtractScore() {
   score--;
   currentScore.textContent = score;
+}
+
+function winDisplay() {
+  if (rangeNum === 50) {
+    if (score > highScore50) highScore50 = score;
+    highScoreDisplay50.textContent = highScore50;
+  }
+  if (rangeNum === 100) {
+    if (score > highScore100) highScore100 = score;
+    highScoreDisplay100.textContent = highScore100;
+  }
+  if (rangeNum === 1000) {
+    if (score > highScore1000) highScore1000 = score;
+    highScoreDisplay1000.textContent = highScore1000;
+  }
+  btnCheck.disabled = true;
+  document.querySelector("body").style.backgroundColor = "green";
+  secretNumDisplay();
+}
+
+function secretNumDisplay() {
+  if (secretNum > 99 && secretNum < 1000) secretNumBox.style.width = "220px";
+  if (secretNum === 1000) secretNumBox.style.width = "260px";
+  secretNumBox.textContent = secretNum;
 }
 
 btnOptions.forEach((button) => {
@@ -51,10 +81,9 @@ btnOptions.forEach((button) => {
         buttonClicked.classList = "btn-num-options-chosen";
       }
     });
-    //Enable Check Button
     btnCheck.disabled = false;
     // Give hint for testing
-    document.querySelector(".btn-hint").textContent = secretNum;
+    btnHint.textContent = secretNum;
   };
 });
 
@@ -72,8 +101,20 @@ btnCheck.onclick = function () {
     checkLose();
   } else if (guess === secretNum) {
     message.textContent = "You Won!";
+    winDisplay();
   }
 };
 
-//For displaying number
-// secretNumBox.style.width = "220px";
+btnReset.onclick = function () {
+  score = 20;
+  currentScore.textContent = score;
+  secretNumBox.style.width = "135px";
+  secretNumBox.textContent = "?";
+  btnHint.textContent = "(Hint)";
+  document.querySelector("body").style.backgroundColor = "rgb(53, 43, 43)";
+  btnOptions.forEach((button) => {
+    button.disabled = false;
+    button.classList = "btn-num-options";
+  });
+  message.textContent = "Start guessing by choosing a number range...";
+};

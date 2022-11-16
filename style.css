@@ -143,14 +143,10 @@ button {
   position: absolute;
   top: 200px;
   left: 8px;
-  opacity: 1;
+  opacity: 0;
   width: 125px;
 }
 
 .btn-hint:hover {
   opacity: 1;
-}
-
-.test {
-  background-color: rgb(105, 47, 47);
 }
