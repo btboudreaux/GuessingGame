@@ -4,7 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Brad's Guessing Game</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div>Guess the Number!</div>
+      <div class="number-options">
+        <button class="btn-num-options" data-num="50">1-50</button>
+        <button class="btn-num-options" data-num="100">1-100</button>
+        <button class="btn-num-options" data-num="1000">1-1000</button>
+      </div>
+      <button class="btn-reset">Reset</button>
+      <button class="btn-hint">(Hint)</button>
+    </header>
+
+    <section class="middle"><div class="secret-num-box">?</div></section>
+
+    <section class="bottom">
+      <div class="guess-input-section">
+        <input class="num-input" type="number" />
+        <button class="btn-check">Check!</button>
+      </div>
+
+      <div class="info-section">
+        <div>Current Score: <span>20</span></div>
+        <div>High Score (1-50): <span>00</span></div>
+        <div>High Score (1-100): <span>00</span></div>
+        <div>High Score (1-1000): <span>00</span></div>
+      </div>
+    </section>
+
+    <section class="message">
+      Start guessing by choosing a number range...
+    </section>
+
+    <section></section>
+  </body>
 </html>

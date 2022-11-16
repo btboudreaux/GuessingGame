@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  font-size: 32px;
+  background-color: rgb(53, 43, 43);
+}
+
+button {
+  font-family: inherit;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 55px 0 0 0;
+}
+
+.number-options {
+  margin: 26px 0 0 0;
+}
+
+.btn-num-options {
+  padding: 12px;
+  border: 2px solid red;
+  border-radius: 12px;
+}
+
+.btn-num-options:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn-num-options:disabled {
+  opacity: 0.3;
+}
+
+.btn-num-options-chosen {
+  padding: 12px;
+  border: 2px solid red;
+  border-radius: 12px;
+}
+
+.btn-num-options-chosen:disabled {
+  background-color: white;
+  color: black;
+}
+
+.btn-reset {
+  padding: 12px;
+  border: 2px solid red;
+  border-radius: 12px;
+  position: absolute;
+  top: 12px;
+  left: 8px;
+}
+
+.btn-reset:hover {
+  background-color: black;
+  color: white;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  border-bottom: 7px double white;
+}
+
+.secret-num-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+  width: 135px;
+  height: 115px;
+  font-size: 62px;
+  transform: translate(0, 50%);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 75px;
+}
+
+.guess-input-section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 75px;
+}
+
+.num-input {
+  text-align: center;
+  height: 85px;
+  width: 200px;
+  font-size: 52px;
+  font-family: inherit;
+}
+
+.btn-check {
+  margin-top: 16px;
+  padding: 16px;
+  border: 2px solid green;
+  border-radius: 12px;
+  font-size: 22px;
+}
+
+.btn-check:hover {
+  border: 2px solid rgb(4, 66, 4);
+}
+
+.btn-check:disabled {
+  background-color: white;
+  border: 2px solid red;
+  opacity: 0.2;
+  color: black;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 16px;
+  font-size: 24px;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-hint {
+  padding: 12px;
+  border: 2px solid red;
+  border-radius: 12px;
+  position: absolute;
+  top: 200px;
+  left: 8px;
+  opacity: 1;
+  width: 125px;
+}
+
+.btn-hint:hover {
+  opacity: 1;
+}
