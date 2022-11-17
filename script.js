@@ -83,7 +83,7 @@ btnOptions.forEach((button) => {
     });
     btnCheck.disabled = false;
     // Give hint for testing
-    btnHint.textContent = secretNum;
+    //btnHint.textContent = secretNum;
   };
 });
 

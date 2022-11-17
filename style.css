@@ -136,7 +136,7 @@ button {
   align-items: center;
 }
 
-.btn-hint {
+/* .btn-hint {
   padding: 12px;
   border: 2px solid red;
   border-radius: 12px;
@@ -149,4 +149,4 @@ button {
 
 .btn-hint:hover {
   opacity: 1;
-}
+} */
