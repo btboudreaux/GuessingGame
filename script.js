@@ -5,12 +5,12 @@ const btnOptions = document.querySelectorAll(".btn-num-options");
 const message = document.querySelector(".message");
 const numInput = document.querySelector(".num-input");
 const btnCheck = document.querySelector(".btn-check");
-//const btnReset = document.querySelector(".btn-reset");
+const btnReset = document.querySelector(".btn-reset");
 const currentScore = document.querySelector(".currentScore");
 const highScoreDisplay50 = document.querySelector(".highscore50");
 const highScoreDisplay100 = document.querySelector(".highscore100");
 const highScoreDisplay1000 = document.querySelector(".highscore1000");
-const btnHint = document.querySelector(".btn-hint");
+//const btnHint = document.querySelector(".btn-hint");
 
 let secretNum;
 let rangeNum;
@@ -110,7 +110,7 @@ btnReset.onclick = function () {
   currentScore.textContent = score;
   secretNumBox.style.width = "135px";
   secretNumBox.textContent = "?";
-  btnHint.textContent = "(Hint)";
+  //btnHint.textContent = "(Hint)";
   document.querySelector("body").style.backgroundColor = "rgb(53, 43, 43)";
   btnOptions.forEach((button) => {
     button.disabled = false;
